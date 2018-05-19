@@ -88,7 +88,7 @@ namespace TestGame.Scenes.Play
 			camera.Calculate(player.Position);
 			//背景の塗りつぶし
 			renderer.Begin();
-			renderer.FillRectangle(new Rectangle(0, 0, GameConstants.SCREEN_WIDTH, GameConstants.SCREEN_HEIGHT), Color.Black);
+			renderer.FillRectangle(new Rectangle(0, 0, GameConstants.SCREEN_WIDTH, GameConstants.SCREEN_HEIGHT), Color.DarkGray);
 			renderer.End();
 			//全てのオブジェクトを描画
 			renderer.Begin(camera.matrix);
