@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D294E13D-04C0-4C14-AFC9-DAC1D764DB3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xna2D</RootNamespace>
+    <AssemblyName>Xna2D</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Contents\Loaders\BGMLoader.cs" />
+    <Compile Include="Contents\Loaders\ContentIterator.cs" />
+    <Compile Include="Contents\Loaders\Loader.cs" />
+    <Compile Include="Contents\Loaders\SoundEffectLoader.cs" />
+    <Compile Include="Contents\Loaders\TextureLoader.cs" />
+    <Compile Include="Contents\Renderer.cs" />
+    <Compile Include="Contents\Sound.cs" />
+    <Compile Include="Game\Animation2D.cs" />
+    <Compile Include="Game\Background.cs" />
+    <Compile Include="Game\Blocks\Block.cs" />
+    <Compile Include="Game\Blocks\MoveBlock.cs" />
+    <Compile Include="Game\Blocks\RemoveBlock.cs" />
+    <Compile Include="Game\Blocks\StopBlock.cs" />
+    <Compile Include="Game\Camera.cs" />
+    <Compile Include="Game\ColliderBase.cs" />
+    <Compile Include="Game\Compatibility.cs" />
+    <Compile Include="Game\DictionaryExtensions.cs" />
+    <Compile Include="Game\Direction.cs" />
+    <Compile Include="Game\DirectionExtensions.cs" />
+    <Compile Include="Game\FlowBackground.cs" />
+    <Compile Include="Game\GameConstants.cs" />
+    <Compile Include="Game\GameObjectBase.cs" />
+    <Compile Include="Game\GameObjectCollection.cs" />
+    <Compile Include="Game\GameObjectRegistry.cs" />
+    <Compile Include="Game\GIO.cs" />
+    <Compile Include="Game\ICameraObsever.cs" />
+    <Compile Include="Game\ICollidable.cs" />
+    <Compile Include="Game\ICollider.cs" />
+    <Compile Include="Game\ICollisionCallback.cs" />
+    <Compile Include="Game\IGameData.cs" />
+    <Compile Include="Game\IGameObject.cs" />
+    <Compile Include="Game\IGameObjectReadOnlyCollection.cs" />
+    <Compile Include="Game\IGameObjectReadOnlyCollectionExtension.cs" />
+    <Compile Include="Game\IGameObjectTile.cs" />
+    <Compile Include="Game\IMapEditorSupport.cs" />
+    <Compile Include="Game\IPlayer.cs" />
+    <Compile Include="Game\IRotetable.cs" />
+    <Compile Include="Game\Rotater.cs" />
+    <Compile Include="Game\Sprite2D.cs" />
+    <Compile Include="Input\Detector.cs" />
+    <Compile Include="Input\Handle.cs" />
+    <Compile Include="Input\HandleConstants.cs" />
+    <Compile Include="Input\IControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\FadeInScene.cs" />
+    <Compile Include="Scenes\FadeOutScene.cs" />
+    <Compile Include="Scenes\ILayered.cs" />
+    <Compile Include="Scenes\IScene.cs" />
+    <Compile Include="Scenes\LayeredScene.cs" />
+    <Compile Include="Scenes\SceneBase.cs" />
+    <Compile Include="Scenes\SceneManager.cs" />
+    <Compile Include="Scroller.cs" />
+    <Compile Include="Utilities\Explode.cs" />
+    <Compile Include="Utilities\FrameTimer.cs" />
+    <Compile Include="Utilities\SpriteBatchOption.cs" />
+    <Compile Include="Views\View.cs" />
+    <Compile Include="Views\ViewGroup.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C97145B-9D5B-4E79-97EC-FF186C2C5E27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestGame</RootNamespace>
+    <AssemblyName>TestGame</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\BlinkTimer.cs" />
+    <Compile Include="Scenes\Clear\ClearScene.cs" />
+    <Compile Include="Scenes\CreditScene.cs" />
+    <Compile Include="Scenes\ExitScene.cs" />
+    <Compile Include="Scenes\GameOver\GameOverScene.cs" />
+    <Compile Include="Scenes\LoadScene.cs" />
+    <Compile Include="Scenes\Pause\PauseScene.cs" />
+    <Compile Include="Scenes\Play\Blocks\CheckPointBlock.cs" />
+    <Compile Include="Scenes\Play\Blocks\FlagBlock.cs" />
+    <Compile Include="Scenes\Play\Blocks\TrapBlock.cs" />
+    <Compile Include="Scenes\Play\GravityBullet.cs" />
+    <Compile Include="Scenes\Play\Player.cs" />
+    <Compile Include="Scenes\Play\PlayScene.cs" />
+    <Compile Include="Scenes\Play\TimeObject.cs" />
+    <Compile Include="Scenes\Resource.cs" />
+    <Compile Include="Scenes\SceneTypes.cs" />
+    <Compile Include="Scenes\Select\SelectScene.cs" />
+    <Compile Include="Scenes\StageSelector.cs" />
+    <Compile Include="Scenes\Title\Button.cs" />
+    <Compile Include="Scenes\Title\Particle.cs" />
+    <Compile Include="Scenes\Title\TitleScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Sound\Song\GameOver.mp3" />
+    <Content Include="Content\Sound\Song\Play.mp3" />
+    <Content Include="Content\Sound\Song\Result.mp3" />
+    <Content Include="Content\Sound\Song\Select.mp3" />
+    <Content Include="Content\Sound\Song\Title.mp3" />
+    <Content Include="Content\Textures\Back.png" />
+    <Content Include="Content\Textures\Back\Black.png" />
+    <Content Include="Content\Textures\Back\Blue_Rect.png" />
+    <Content Include="Content\Textures\Back\Container.png" />
+    <Content Include="Content\Textures\Back\ControlHelp.png" />
+    <Content Include="Content\Textures\Back\FlagHelp.png" />
+    <Content Include="Content\Textures\Back\Green.png" />
+    <Content Include="Content\Textures\Back\Green_Rect.png" />
+    <Content Include="Content\Textures\Back\Red_Rect.png" />
+    <Content Include="Content\Textures\Back\SiteHelp.png" />
+    <Content Include="Content\Textures\Back\Yellow_Rect.png" />
+    <Content Include="Content\Textures\Block\Blue.png" />
+    <Content Include="Content\Textures\Block\Blue_V6.png" />
+    <Content Include="Content\Textures\Block\Blue_V6_Big.png" />
+    <Content Include="Content\Textures\Block\CheckPoint.png" />
+    <Content Include="Content\Textures\Block\CheckPoint_Active.png" />
+    <Content Include="Content\Textures\Block\CheckPoint_Blink.png" />
+    <Content Include="Content\Textures\Block\Flag.png" />
+    <Content Include="Content\Textures\Block\Flag_Anime.png" />
+    <Content Include="Content\Textures\Block\Gray.png" />
+    <Content Include="Content\Textures\Block\Green.png" />
+    <Content Include="Content\Textures\Block\Green_V6.png" />
+    <Content Include="Content\Textures\Block\Green_V6_Big.png" />
+    <Content Include="Content\Textures\Block\Move.png" />
+    <Content Include="Content\Textures\Block\Needle_Bottom.png" />
+    <Content Include="Content\Textures\Block\Needle_Left.png" />
+    <Content Include="Content\Textures\Block\Needle_Right.png" />
+    <Content Include="Content\Textures\Block\Needle_Top.png" />
+    <Content Include="Content\Textures\Block\Red.png" />
+    <Content Include="Content\Textures\Block\Red_V6.png" />
+    <Content Include="Content\Textures\Block\Red_V6_Big.png" />
+    <Content Include="Content\Textures\Block\Remove.png" />
+    <Content Include="Content\Textures\Block\Stop.png" />
+    <Content Include="Content\Textures\Block\Yellow.png" />
+    <Content Include="Content\Textures\Block\Yellow_V6.png" />
+    <Content Include="Content\Textures\Block\Yellow_V6_Big.png" />
+    <Content Include="Content\Textures\CameraObject.png" />
+    <Content Include="Content\Textures\Continue.png" />
+    <Content Include="Content\Textures\Credit.png" />
+    <Content Include="Content\Textures\Exit.png" />
+    <Content Include="Content\Textures\FontInfo.png" />
+    <Content Include="Content\Textures\GameOver.png" />
+    <Content Include="Content\Textures\GShot.png" />
+    <Content Include="Content\Textures\NextStage.png" />
+    <Content Include="Content\Textures\No.png" />
+    <Content Include="Content\Textures\NumberBlack30.png" />
+    <Content Include="Content\Textures\NumberWhite30.png" />
+    <Content Include="Content\Textures\Player.png" />
+    <Content Include="Content\Textures\Retry.png" />
+    <Content Include="Content\Textures\Scroll.png" />
+    <Content Include="Content\Textures\Select\Page.png" />
+    <Content Include="Content\Textures\Select\PageSelected.png" />
+    <Content Include="Content\Textures\Select\PageSelected_Disable.png" />
+    <Content Include="Content\Textures\Select\Page_Disable.png" />
+    <Content Include="Content\Textures\Select\SelectNextPage.png" />
+    <Content Include="Content\Textures\Select\SelectNextPage_Active.png" />
+    <Content Include="Content\Textures\Select\SelectPrevPage.png" />
+    <Content Include="Content\Textures\Select\SelectPrevPage_Active.png" />
+    <Content Include="Content\Textures\Select\Select_Back.png" />
+    <Content Include="Content\Textures\Select\Select_Back_Active.png" />
+    <Content Include="Content\Textures\Select\StageSelect.png" />
+    <Content Include="Content\Textures\Site.png" />
+    <Content Include="Content\Textures\StageClear.png" />
+    <Content Include="Content\Textures\StageSelectIcon.png" />
+    <Content Include="Content\Textures\Start.png" />
+    <Content Include="Content\Textures\TimeObject.png" />
+    <Content Include="Content\Textures\Title.png" />
+    <Content Include="Content\Textures\Yes.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xna2D\Xna2D.csproj">
+      <Project>{d294e13d-04c0-4c14-afc9-dac1d764db3a}</Project>
+      <Name>Xna2D</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
