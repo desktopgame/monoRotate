@@ -27,6 +27,14 @@ Rotateは自作の2Dゲームです。
 Windows10 64bit  
 VisualStudio Proffesional 2015
 
+# スクリーンショット
+## タイトル
+![タイトル](img/title.png)
+## ステージセレクト
+![セレクト](img/select.png)
+## プレイ
+![プレイ](img/play.png)
+
 # ライセンス
 フォント technoid を使用しています。  
 (個人/商用問わずフリーのフォント)
