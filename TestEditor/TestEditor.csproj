@@ -114,6 +114,10 @@
       <Project>{8f7268ed-dce0-4bde-8888-bd1a963811be}</Project>
       <Name>EditorUtilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestGame\TestGame.csproj">
+      <Project>{2c97145b-9d5b-4e79-97ec-ff186c2c5e27}</Project>
+      <Name>TestGame</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VisualEditorAPI\VisualEditorAPI.csproj">
       <Project>{3dba0455-4d7a-4856-965a-d63ff19b9f1b}</Project>
       <Name>VisualEditorAPI</Name>
